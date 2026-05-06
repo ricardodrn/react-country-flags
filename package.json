@@ -1,6 +1,6 @@
 {
   "name": "@rdnr/react-country-flags",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Minimal, tree-shakeable React country flag components with code splitting",
   "repository": {
     "type": "git",
