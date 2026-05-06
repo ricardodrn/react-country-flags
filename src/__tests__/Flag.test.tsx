@@ -131,7 +131,7 @@ describe('Flag Component', () => {
     );
 
     await waitFor(() => {
-      const svg = container.querySelector('svg') as HTMLElement;
+      const svg = container.querySelector('svg') as SVGSVGElement;
       expect(svg.style.opacity).toBe('0.5');
     });
   });

@@ -64,7 +64,7 @@ describe('CL Flag Component', () => {
     const { container } = render(
       <CL style={{ opacity: 0.5, filter: 'brightness(0.8)' }} />
     );
-    const svg = container.querySelector('svg') as HTMLElement;
+    const svg = container.querySelector('svg') as SVGSVGElement;
     expect(svg.style.opacity).toBe('0.5');
   });
 });
