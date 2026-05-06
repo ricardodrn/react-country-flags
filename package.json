@@ -1,5 +1,5 @@
 {
-  "name": "react-country-flags",
+   "name": "@ricardodnr/react-country-flags",
   "version": "0.1.0",
   "description": "Minimal, tree-shakeable React country flag components with code splitting",
   "type": "module",
