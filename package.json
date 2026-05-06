@@ -17,6 +17,26 @@
         "types": "./dist/index.d.cts",
         "default": "./dist/index.cjs"
       }
+    },
+    "./Flag": {
+      "import": {
+        "types": "./dist/Flag.d.ts",
+        "default": "./dist/Flag.js"
+      },
+      "require": {
+        "types": "./dist/Flag.d.cts",
+        "default": "./dist/Flag.cjs"
+      }
+    },
+    "./flags/*": {
+      "import": {
+        "types": "./dist/flags/*.d.ts",
+        "default": "./dist/flags/*.js"
+      },
+      "require": {
+        "types": "./dist/flags/*.d.cts",
+        "default": "./dist/flags/*.cjs"
+      }
     }
   },
   "files": [
@@ -24,23 +44,36 @@
     "src"
   ],
   "scripts": {
+    "generate": "tsx scripts/generate-flags.ts",
     "build": "tsup",
     "dev": "tsup --watch",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "prepare": "husky"
   },
   "peerDependencies": {
     "react": ">=17.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.5.3",
+    "@commitlint/config-conventional": "^20.5.3",
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
     "@svgr/plugin-svgo": "^8.1.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
     "@types/node": "^22.0.0",
     "@types/react": "^18.0.0",
+    "@vitest/ui": "^4.1.5",
     "flag-icons": "^7.2.3",
+    "husky": "^9.1.7",
+    "jsdom": "^29.1.1",
     "svgo": "^3.3.2",
     "tsup": "^8.3.0",
     "tsx": "^4.19.0",
-    "typescript": "^5.6.0"
+    "typescript": "^5.6.0",
+    "vitest": "^4.1.5"
   }
 }
