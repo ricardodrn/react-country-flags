@@ -27,6 +27,16 @@
         "types": "./dist/Flag.d.cts",
         "default": "./dist/Flag.cjs"
       }
+    },
+    "./flags/*": {
+      "import": {
+        "types": "./dist/flags/*.d.ts",
+        "default": "./dist/flags/*.js"
+      },
+      "require": {
+        "types": "./dist/flags/*.d.cts",
+        "default": "./dist/flags/*.cjs"
+      }
     }
   },
   "files": [
