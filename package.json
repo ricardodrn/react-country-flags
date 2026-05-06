@@ -1,5 +1,5 @@
 {
-   "name": "@ricardodnr/react-country-flags",
+  "name": "@rdnr/react-country-flags",
   "version": "0.1.0",
   "description": "Minimal, tree-shakeable React country flag components with code splitting",
   "type": "module",
@@ -7,6 +7,8 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "keywords": ["react", "country-flags", "flags"],
+  "license": "MIT",
   "exports": {
     ".": {
       "import": {

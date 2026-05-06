@@ -1,4 +1,4 @@
-# react-country-flags
+# @rdnr/react-country-flags
 
 A lightweight, performant React library for displaying country flags. Built with TypeScript, optimized for bundle size, and designed to scale from simple projects to complex applications.
 
@@ -15,11 +15,11 @@ A lightweight, performant React library for displaying country flags. Built with
 Pick your favorite package manager:
 
 ```bash
-npm install react-country-flags
+npm i @rdnr/react-country-flags
 # or
-pnpm add react-country-flags
+pnpm add @rdnr/react-country-flags
 # or
-yarn add react-country-flags
+yarn add @rdnr/react-country-flags
 ```
 
 **Peer dependency:** React 17 or later. Make sure you have React already installed in your project.
@@ -33,7 +33,7 @@ yarn add react-country-flags
 When you know which flags you need ahead of time, import them directly. Your bundler will automatically tree-shake everything else, so you only pay for what you use.
 
 ```tsx
-import { CL, US, DE } from 'react-country-flags';
+import { CL, US, DE } from '@rdnr/react-country-flags';
 
 export default function App() {
   return (
@@ -51,7 +51,7 @@ Each flag component accepts all standard SVG attributes (`width`, `height`, `cla
 If you prefer being explicit about the import path:
 
 ```tsx
-import CL from 'react-country-flags/flags/CL';
+import CL from '@rdnr/react-country-flags/flags/CL';
 ```
 
 ### Lazy component — for dynamic flags
@@ -60,7 +60,7 @@ When the flag to display is decided at runtime (e.g., user selection, API respon
 
 ```tsx
 import { Suspense } from 'react';
-import Flag from 'react-country-flags/Flag';
+import Flag from '@rdnr/react-country-flags/Flag';
 
 export default function CountryBadge({ code }: { code: string }) {
   return (
@@ -86,9 +86,9 @@ Invalid country codes are handled gracefully — the component renders nothing w
 ### Named flag components
 
 ```ts
-import { CL } from 'react-country-flags';
+import { CL } from '@rdnr/react-country-flags';
 // or
-import CL from 'react-country-flags/flags/CL';
+import CL from '@rdnr/react-country-flags/flags/CL';
 ```
 
 | Prop | Type | Description |
@@ -104,7 +104,7 @@ All flags render with a `viewBox` so they scale correctly from any `width`/`heig
 ### `<Flag>` lazy component
 
 ```ts
-import Flag from 'react-country-flags/Flag';
+import Flag from '@rdnr/react-country-flags/Flag';
 ```
 
 | Prop | Type | Default | Description |
@@ -118,7 +118,7 @@ import Flag from 'react-country-flags/Flag';
 The union of all 257 supported codes, generated automatically from the flag set.
 
 ```ts
-import type { CountryCode } from 'react-country-flags';
+import type { CountryCode } from '@rdnr/react-country-flags';
 
 const code: CountryCode = 'CL'; // fully autocompleted
 ```
@@ -158,8 +158,8 @@ The `package.json` includes `"sideEffects": false`, which tells webpack, Rollup,
 
 ```bash
 git clone <repo>
-cd react-country-flags
-npm install
+cd @rdnr/react-country-flags
+pnpm install
 ```
 
 ### Regenerate flags from source
@@ -167,7 +167,7 @@ npm install
 Want to pick up the latest version of `flag-icons`? Just run:
 
 ```bash
-npm run generate
+pnpm run generate
 ```
 
 This script (`scripts/generate-flags.ts`) handles the entire pipeline:
@@ -181,7 +181,7 @@ This script (`scripts/generate-flags.ts`) handles the entire pipeline:
 ### Build for production
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 This outputs to `dist/` using [tsup](https://tsup.egoist.dev/):
@@ -196,7 +196,7 @@ This outputs to `dist/` using [tsup](https://tsup.egoist.dev/):
 If you just want to verify types without running a full build:
 
 ```bash
-npm run typecheck
+pnpm run typecheck
 ```
 
 ---
@@ -250,7 +250,7 @@ export default defineConfig({
 ### Direct imports
 
 ```ts
-import { CL } from 'react-country-flags';
+import { CL } from '@rdnr/react-country-flags';
 // → dist/index.js re-exports from dist/flags/CL.js
 // → only dist/flags/CL.js (+ its SVG chunk) makes it into your bundle
 ```
