@@ -17,6 +17,16 @@
         "types": "./dist/index.d.cts",
         "default": "./dist/index.cjs"
       }
+    },
+    "./Flag": {
+      "import": {
+        "types": "./dist/Flag.d.ts",
+        "default": "./dist/Flag.js"
+      },
+      "require": {
+        "types": "./dist/Flag.d.cts",
+        "default": "./dist/Flag.cjs"
+      }
     }
   },
   "files": [
@@ -24,6 +34,7 @@
     "src"
   ],
   "scripts": {
+    "generate": "tsx scripts/generate-flags.ts",
     "build": "tsup",
     "dev": "tsup --watch",
     "typecheck": "tsc --noEmit",

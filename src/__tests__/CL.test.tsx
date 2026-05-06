@@ -52,4 +52,19 @@ describe('CL Flag Component', () => {
     // fillRule is rendered as fill-rule in the DOM
     expect(group).toHaveAttribute('fill-rule', 'evenodd');
   });
+
+  it('should have multiple path elements for flag design', () => {
+    const { container } = render(<CL />);
+    const paths = container.querySelectorAll('svg path');
+    // Chile flag has at least 4 paths (blue, white, star, red sections)
+    expect(paths.length).toBeGreaterThanOrEqual(4);
+  });
+
+  it('should be compatible with style props', () => {
+    const { container } = render(
+      <CL style={{ opacity: 0.5, filter: 'brightness(0.8)' }} />
+    );
+    const svg = container.querySelector('svg') as HTMLElement;
+    expect(svg.style.opacity).toBe('0.5');
+  });
 });
