@@ -1,4 +1,5 @@
-# @rdnr/react-country-flags
+# react-country-flags
+![npm](https://img.shields.io/npm/v/@rdnr/react-country-flags)
 
 A lightweight, performant React library for displaying country flags. Built with TypeScript, optimized for bundle size, and designed to scale from simple projects to complex applications.
 
