@@ -1,16 +1,13 @@
-name: Publish to npm
+name: Release
 
 on:
   push:
     branches:
       - main
-    tags:
-      - "v*"
 
 jobs:
-  publish:
+  release:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 
@@ -18,17 +15,15 @@ jobs:
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
+          scope: "@rdnr"
 
       - run: corepack enable
       - run: pnpm install --frozen-lockfile
-      - run: pnpm build
 
-      # 👇 ESTE ES EL FIX CLAVE
-      - run: echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > ~/.npmrc
+      - name: Create Release PR or Publish
+        uses: changesets/action@v1
+        with:
+          publish: pnpm release
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - run: pnpm publish --access public --no-git-checks
-      - run: npm whoami
-        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

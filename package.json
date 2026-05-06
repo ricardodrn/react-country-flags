@@ -70,7 +70,8 @@
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:run": "vitest run",
-    "prepare": "husky"
+    "prepare": "husky",
+    "release": "pnpm build && pnpm changeset publish"
   },
   "peerDependencies": {
     "react": ">=17.0.0"
