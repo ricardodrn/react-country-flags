@@ -18,6 +18,8 @@ const svgrOptions: Config = {
           overrides: { removeViewBox: false },
         },
       },
+      { name: 'removeXMLNS' },
+      { name: 'removeXlink' },
     ],
   },
   typescript: true,

@@ -14,12 +14,6 @@ describe('CL Flag Component', () => {
     expect(svg).toBeInTheDocument();
   });
 
-  it('should have the correct namespace', () => {
-    const { container } = render(<CL />);
-    const svg = container.querySelector('svg');
-    expect(svg).toHaveAttribute('xmlns', 'http://www.w3.org/2000/svg');
-  });
-
   it('should have the correct viewBox', () => {
     const { container } = render(<CL />);
     const svg = container.querySelector('svg');
