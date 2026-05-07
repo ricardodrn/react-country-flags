@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/ricardodrn/react-country-flags.git"
   },
-  "homepage": "https://github.com/ricardodrn/react-country-flags?tab=readme-ov-file#readme",
+  "homepage": "https://github.com/ricardodrn/react-country-flags#readme",
   "bugs": {
     "url": "https://github.com/ricardodrn/react-country-flags/issues"
   },
@@ -23,7 +23,8 @@
     "icons"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   },
   "license": "MIT",
   "exports": {
