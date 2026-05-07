@@ -1,5 +1,11 @@
 # @rdnr/react-country-flags
 
+## 0.1.5
+
+### Patch Changes
+
+- 5bed496: Change Readme link for npmjs
+
 ## 0.1.4
 
 ### Patch Changes
