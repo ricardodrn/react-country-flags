@@ -1,12 +1,32 @@
 {
-  "name": "react-country-flags",
-  "version": "0.1.0",
+  "name": "@rdnr/react-country-flags",
+  "version": "0.1.5",
   "description": "Minimal, tree-shakeable React country flag components with code splitting",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ricardodrn/react-country-flags.git"
+  },
+  "homepage": "https://github.com/ricardodrn/react-country-flags#readme",
+  "bugs": {
+    "url": "https://github.com/ricardodrn/react-country-flags/issues"
+  },
   "type": "module",
   "sideEffects": false,
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "keywords": [
+    "react",
+    "flags",
+    "country",
+    "svg",
+    "icons"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "license": "MIT",
   "exports": {
     ".": {
       "import": {
@@ -51,12 +71,14 @@
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:run": "vitest run",
-    "prepare": "husky"
+    "prepare": "husky",
+    "release": "pnpm build && pnpm changeset publish"
   },
   "peerDependencies": {
     "react": ">=17.0.0"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.31.0",
     "@commitlint/cli": "^20.5.3",
     "@commitlint/config-conventional": "^20.5.3",
     "@svgr/core": "^8.1.0",
