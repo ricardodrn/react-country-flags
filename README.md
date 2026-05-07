@@ -1,11 +1,12 @@
 # react-country-flags
 [![npm](https://img.shields.io/npm/v/@rdnr/react-country-flags)](https://www.npmjs.com/package/@rdnr/react-country-flags)
+[![Socket Badge](https://badge.socket.dev/npm/package/@rdnr/react-country-flags/0.1.5)](https://badge.socket.dev/npm/package/@rdnr/react-country-flags/0.1.5)
 
 A lightweight, performant React library for displaying country flags. Built with TypeScript, optimized for bundle size, and designed to scale from simple projects to complex applications.
 
 - **257 flags** sourced from [flag-icons](https://github.com/lipis/flag-icons) — comprehensive global coverage
 - **Zero runtime overhead** — each flag is a plain SVG React component, nothing more
-- **True code splitting** — import only what you use, leave the rest out of your bundle
+- **True code splitting** — import only what you use, leave the rest out of your bundles
 - **Two flexible APIs** — direct named import for known flags, lazy component for dynamic ones
 - **Universal support** — ESM + CJS formats work with every modern bundler and Node.js environment
 
