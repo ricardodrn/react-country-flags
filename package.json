@@ -1,6 +1,6 @@
 {
   "name": "@rdnr/react-country-flags",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "description": "Minimal, tree-shakeable React country flag components with code splitting",
   "repository": {
     "type": "git",
@@ -60,8 +60,7 @@
     }
   },
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "scripts": {
     "generate": "tsx scripts/generate-flags.ts",
@@ -72,7 +71,7 @@
     "test:ui": "vitest --ui",
     "test:run": "vitest run",
     "prepare": "husky",
-    "release": "pnpm build && pnpm changeset publish"
+    "release": "pnpm build && pnpm changeset publish --provenance"
   },
   "peerDependencies": {
     "react": ">=17.0.0"
