@@ -24,7 +24,7 @@ jobs:
           scope: "@rdnr"
 
       - run: corepack enable
-      - run: echo 'onlyBuiltDependencies[]=esbuild' >> .npmrc
+      - run: echo 'onlyBuiltDependencies=esbuild' >> .npmrc
       - run: pnpm install --frozen-lockfile
 
       - name: Create Release PR or Publish
