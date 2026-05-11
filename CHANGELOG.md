@@ -1,5 +1,17 @@
 # @rdnr/react-country-flags
 
+## 0.1.7
+
+### Patch Changes
+
+- 3ca0296: Refactor code structure and enhance README for clarity
+
+## 0.1.6
+
+### Patch Changes
+
+- 7669fc6: Refactor code structure and enhance README for clarity
+
 ## 0.1.5
 
 ### Patch Changes

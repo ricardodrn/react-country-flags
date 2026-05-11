@@ -7,8 +7,8 @@
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": [],
-  "npmPublishOptions": {
-    "provenance": true
-  }
+  "ignore": [],                                                                                                                                 
+  "npmPublishOptions": {                                                                                                                      
+    "provenance": true                                                                                                                   
+  }                                                                                                                                      
 }
