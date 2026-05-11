@@ -63,12 +63,12 @@ describe('Flag Component', () => {
 
   it('should display fallback while loading', async () => {
     const fallback = <div>Loading...</div>;
-    render(
+    const { container } = render(
       <Flag country="CL" fallback={fallback} />
     );
 
     await waitFor(() => {
-      const svg = document.querySelector('svg');
+      const svg = container.querySelector('svg');
       expect(svg).toBeInTheDocument();
     });
   });
@@ -87,12 +87,12 @@ describe('Flag Component', () => {
 
   it('should use Suspense with custom fallback', async () => {
     const customFallback = <div role="status">Custom Loading...</div>;
-    render(
+    const { container } = render(
       <Flag country="CL" fallback={customFallback} />
     );
 
     await waitFor(() => {
-      const svg = document.querySelector('svg');
+      const svg = container.querySelector('svg');
       expect(svg).toBeInTheDocument();
     });
   });
