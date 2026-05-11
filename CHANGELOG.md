@@ -1,5 +1,11 @@
 # @rdnr/react-country-flags
 
+## 0.2.0
+
+### Minor Changes
+
+- b48541b: new minor with optimized features
+
 ## 0.1.8
 
 ### Patch Changes
